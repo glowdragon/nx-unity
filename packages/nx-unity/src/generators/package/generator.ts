@@ -39,14 +39,6 @@ export async function packageGenerator(tree: Tree, options: PackageGeneratorSche
         options.assemblyName + ".Editor.Tests"
     )
 
-    // Add to global package.json
-    const packageJson = JSON.parse(tree.read("package.json").toString())
-    if (!packageJson.unityDependencies) {
-        packageJson.unityDependencies = {}
-    }
-    packageJson.unityDependencies[projectName] = `file:${projectRoot}`
-    tree.write("package.json", JSON.stringify(packageJson, null, 2))
-
     // Add implicit dependency to all Unity projects in the Nx config
     getUnityProjects(tree).forEach((unityProjectName) => {
         addImplicitDependency(tree, unityProjectName, projectName)

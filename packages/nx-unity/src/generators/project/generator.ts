@@ -13,11 +13,9 @@ import * as fs from "fs"
 import * as os from "os"
 import axios from "axios"
 import AdmZip from "adm-zip"
-import { addDependencyToUnityProject, createUnityProject } from "../../utils/unity-project"
-import { installPackage } from "../../utils/package-manager"
+import { createUnityProject } from "../../utils/unity-project"
 import { getUnityPackages } from "../../utils/workspace"
 import { posixJoin } from "../../utils/posix"
-import { executeCommand } from "../../utils/exec"
 
 export async function projectGenerator(tree: Tree, options: ProjectGeneratorSchema) {
     const { name: projectName } = options
@@ -93,12 +91,6 @@ export async function projectGenerator(tree: Tree, options: ProjectGeneratorSche
             throw new Error(`Failed to download template from ${downloadUrl}`)
         }
     }
-
-    // Install OpenUPM
-    await installPackage("", "openupm-cli", true)
-
-    // Add the Unity package of the Nx plugin
-    await executeCommand("npx openupm add com.danielkreitsch.nx-unity -r http://verdaccio.danielkreitsch.com", projectRoot)
 
     await formatFiles(tree)
 }
