@@ -1,3 +1,10 @@
 {
-  "eslint.validate": ["json"]
+    "dotnet.preferCSharpExtension": true,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "explorer.excludeGitIgnore": false,
+    "files.exclude": {
+        "**/*.meta": true,
+    },
 }

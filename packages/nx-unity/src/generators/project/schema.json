@@ -1,45 +1,49 @@
 {
-  "$schema": "http://json-schema.org/schema",
-  "$id": "Project",
-  "title": "",
-  "type": "object",
-  "properties": {
-    "name": {
-      "type": "string",
-      "description": "The name of the project.",
-      "default": "my-project",
-      "x-prompt": "What name would you like to use for the project?",
-      "pattern": "^[a-zA-Z][^:]*$"
+    "$schema": "http://json-schema.org/schema",
+    "$id": "Project",
+    "title": "",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "The name of the project.",
+            "default": "my-project",
+            "x-prompt": "What name would you like to use for the project?",
+            "pattern": "^[a-zA-Z][^:]*$"
+        },
+        "displayName": {
+            "type": "string",
+            "description": "The display name of the project.",
+            "default": "My Project",
+            "x-prompt": "What display name would you like to use for the project?"
+        },
+        "template": {
+            "type": "string",
+            "description": "The template to use for the project.",
+            "default": "default",
+            "x-prompt": {
+                "message": "What rendering pipeline would you like to use for the project?",
+                "type": "list",
+                "items": [
+                    {
+                        "value": "builtin",
+                        "label": "Built-in Render Pipeline"
+                    },
+                    {
+                        "value": "urp",
+                        "label": "Universal Render Pipeline (URP)"
+                    },
+                    {
+                        "value": "hdrp",
+                        "label": "High Definition Render Pipeline (HDRP)"
+                    }
+                ]
+            }
+        }
     },
-    "displayName": {
-      "type": "string",
-      "description": "The display name of the project.",
-      "default": "My Project",
-      "x-prompt": "What display name would you like to use for the project?"
-    },
-    "template": {
-      "type": "string",
-      "description": "The template to use for the project.",
-      "default": "default",
-      "x-prompt": {
-        "message": "What rendering pipeline would you like to use for the project?",
-        "type": "list",
-        "items": [
-          {
-            "value": "builtin",
-            "label": "Built-in Render Pipeline"
-          },
-          {
-            "value": "urp",
-            "label": "Universal Render Pipeline (URP)"
-          },
-          {
-            "value": "hdrp",
-            "label": "High Definition Render Pipeline (HDRP)"
-          }
-        ]
-      }
-    }
-  },
-  "required": ["name", "displayName", "template"]
+    "required": [
+        "name",
+        "displayName",
+        "template"
+    ]
 }

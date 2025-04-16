@@ -8,23 +8,23 @@ import { posixJoin } from "./posix"
  * @param name The name of the assembly definition, e.g. `MyCompany.MyPackage`.
  */
 function createAssemblyDefinition(tree: Tree, outputPath: string, name: string) {
-  tree.write(
-    posixJoin(outputPath, `${name}.asmdef`),
-    JSON.stringify({
-      name: name,
-      rootNamespace: "",
-      references: [],
-      includePlatforms: [],
-      excludePlatforms: [],
-      allowUnsafeCode: false,
-      overrideReferences: false,
-      precompiledReferences: [],
-      autoReferenced: true,
-      defineConstraints: [],
-      versionDefines: [],
-      noEngineReferences: false,
-    })
-  )
+    tree.write(
+        posixJoin(outputPath, `${name}.asmdef`),
+        JSON.stringify({
+            name: name,
+            rootNamespace: "",
+            references: [],
+            includePlatforms: [],
+            excludePlatforms: [],
+            allowUnsafeCode: false,
+            overrideReferences: false,
+            precompiledReferences: [],
+            autoReferenced: true,
+            defineConstraints: [],
+            versionDefines: [],
+            noEngineReferences: false,
+        })
+    )
 }
 
 export { createAssemblyDefinition }

@@ -1,49 +1,48 @@
 {
-  "name": "nx-unity",
-  "version": "0.0.1",
-  "description": "Nx plugin for managing Unity projects and packages within a monorepo",
-  "keywords": [
-    "monorepo",
-    "nx",
-    "unity",
-    "upm"
-  ],
-  "author": "Daniel Kreitsch <hello@danielkreitsch.com>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/danielkreitsch/nx-unity.git"
-  },
-  "bugs": {
-    "url": "https://github.com/danielkreitsch/nx-unity/issues"
-  },
-  "scripts": {},
-  "private": true,
-  "devDependencies": {
-    "@nx/eslint": "19.4.0",
-    "@nx/eslint-plugin": "19.4.0",
-    "@nx/jest": "19.4.0",
-    "@nx/js": "19.4.0",
-    "@nx/plugin": "^19.4.0",
-    "@swc-node/register": "~1.9.1",
-    "@swc/cli": "~0.3.12",
-    "@swc/core": "~1.5.7",
-    "@swc/helpers": "~0.5.11",
-    "@types/node": "18.16.9",
-    "@typescript-eslint/eslint-plugin": "^7.3.0",
-    "@typescript-eslint/parser": "^7.3.0",
-    "eslint": "~8.57.0",
-    "eslint-config-prettier": "^9.0.0",
-    "nx": "19.4.0",
-    "prettier": "^2.6.2",
-    "typescript": "~5.4.2"
-  },
-  "workspaces": [
-    "packages/nx-unity"
-  ],
-  "dependencies": {
-    "@nx/devkit": "19.4.0",
-    "adm-zip": "^0.5.14",
-    "tslib": "^2.3.0"
-  }
+    "name": "nx-unity",
+    "version": "0.0.1",
+    "description": "Nx plugin for managing Unity projects and packages within a monorepo",
+    "keywords": [
+        "monorepo",
+        "nx",
+        "unity"
+    ],
+    "author": "Daniel Kreitsch <hello@danielkreitsch.com>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/glowdragon/nx-unity.git"
+    },
+    "bugs": {
+        "url": "https://github.com/glowdragon/nx-unity/issues"
+    },
+    "scripts": {},
+    "private": true,
+    "devDependencies": {
+        "@nx/eslint": "19.4.0",
+        "@nx/eslint-plugin": "19.4.0",
+        "@nx/jest": "19.4.0",
+        "@nx/js": "19.4.0",
+        "@nx/plugin": "^19.4.0",
+        "@swc-node/register": "~1.9.1",
+        "@swc/cli": "~0.3.12",
+        "@swc/core": "~1.5.7",
+        "@swc/helpers": "~0.5.11",
+        "@types/node": "18.16.9",
+        "@typescript-eslint/eslint-plugin": "^7.3.0",
+        "@typescript-eslint/parser": "^7.3.0",
+        "eslint": "~8.57.0",
+        "eslint-config-prettier": "^9.0.0",
+        "nx": "19.4.0",
+        "prettier": "^2.6.2",
+        "typescript": "~5.4.2"
+    },
+    "workspaces": [
+        "packages/nx-unity"
+    ],
+    "dependencies": {
+        "@nx/devkit": "19.4.0",
+        "adm-zip": "^0.5.14",
+        "tslib": "^2.3.0"
+    }
 }
